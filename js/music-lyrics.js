@@ -4,7 +4,7 @@ var _data = '';
 var currentLine = '';
 mounted();
 async function setLyric() {
-  await fetch('lyric.json', {
+  await fetch('js/lyrics/lyric.json', {
     method: 'GET',
   })
     .then((response) => response.json())
