@@ -1,41 +1,44 @@
+@import url('https://masumbillah6778.github.io/fonts/bangla/bangla-custom-font.css');
+
 * {
-    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    min-height: 90vh;
-    max-height: 90vh;
-    margin: 0;
-    color: #fff;
-    display: -webkit-box;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    flex-direction: column;
-    background-image: url("bg.jpg");
+    background-image: url("im/bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
     outline: none;
 }
 
-body a {
-    color: inherit;
-}
-
-body a:not(:hover) {
-    text-decoration: none;
+#overlay {
+    position: fixed;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 2;
+    cursor: pointer;
 }
 
 body .content {
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
     max-width: 800px;
-    margin: 2px auto;
+    margin: 10px auto;
+    padding: 10px;
     overflow: hidden;
-    -webkit-box-flex: 1;
-    flex-grow: 1;
-    height: calc(100% - 80px);
     z-index: 9;
     border: 2px solid red;
     border-radius: 20px;
@@ -43,8 +46,6 @@ body .content {
 
 body .content .lyrics {
     padding: 50vh 0;
-    min-height: calc(100vh - 80px);
-    width: calc(100% - 40px);
     margin: 0 20px;
     text-align: center;
     -webkit-transition: all 0.25s;
@@ -56,9 +57,9 @@ body .content .lyrics>div {
     color: pink;
     position: relative;
     font-size: 30px;
-    line-height: 80px;
     font-weight: bold;
-    font-family: ;
+    font-family: 'solaiman-lipi', times;
+    line-height: 80px;
     -webkit-transition: all 0.25s;
     transition: all 0.25s;
 }
@@ -72,11 +73,10 @@ body .content .lyrics>div.highlighted {
 body .player {
     background: #F9F9F9;
     color: #000;
-    min-height: 140px;
-    max-height: 140px;
-    margin-top: 20px;
-    margin-right: 40px;
-    margin-left: 40px;
+    width: 100%;
+    max-width: 1520px;
+    height: 140px;
+    margin: 0px 10px 10px;
     z-index: 10;
     display: -webkit-box;
     display: flex;
@@ -93,20 +93,6 @@ body .player .left {
     background-image: url("https://masumbillah6778bd.github.io/images/zubin-garg.jpg");
     background-size: cover;
     border-top-left-radius: 30px;
-}
-
-#overlay {
-    position: fixed;
-    display: block;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #a37ebad3;
-    z-index: 2;
-    cursor: pointer;
 }
 
 body .player .right {
@@ -132,10 +118,16 @@ body .player .right .top {
     padding-left: 10px;
 }
 
-p::first-line {
+body .player p {
+    color: black;
+    font-size: 10px;
+    font-family: 'solaiman-lipi', times;
+}
+
+body .player p::first-line {
     color: red;
     font-size: 20px;
-    font-family: ;
+    font-family: 'shokun-tola', times;
 }
 
 .songs {
@@ -461,60 +453,69 @@ body .player .right .bottom video {
 
 
 
-@media (min-width: 310px) and (max-width: 600px) {
-    .songs {
-        font-size: 10px;
-        font-weight: 600;
+
+
+
+
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url("im/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        font-family: 'Montserrat', sans-serif;
+        width: 100%;
+        height: 100vh;
     }
 
     body .content {
+        ackground-color: #ffaa71;
         width: 100%;
-        max-width: 500px;
+        max-width: 400px;
     }
 
     body .content .lyrics {
         padding: 50vh 0;
-        min-height: calc(100vh - 80px);
-        width: calc(100% - 40px);
-        margin: 0 10px;
+        margin: 0 20px;
         text-align: center;
         -webkit-transition: all 0.25s;
         transition: all 0.25s;
         position: relative;
-        word-wrap: break-word;
-        font-size: 14px;
     }
+
     body .content .lyrics>div {
         color: pink;
         position: relative;
         font-size: 20px;
-        line-height: 30px;
         font-weight: bold;
+        font-family: ;
+        line-height: 80px;
         -webkit-transition: all 0.25s;
-        word-wrap: break-word;
         transition: all 0.25s;
     }
+    
     body .content .lyrics>div.highlighted {
         color: yellow;
         font-size: 20px;
         font-weight: bold;
         word-wrap: break-word;
     }
+
     body .player {
-        z-index: 10;
         background: #F9F9F9;
-        color: #000;
-        min-height: 140px;
-        max-height: 140px;
-        display: -webkit-box;
-        display: flex;
-        -webkit-box-orient: horizontal;
-        -webkit-box-direction: normal;
-        flex-direction: row;
-        outline: none;
-        margin-bottom: 20px;
-        margin-right: 14px;
-        margin-left: 14px;
-        border-radius: 30px 0 30px 0;
+        width: 100%;
+        max-width: 415px;
+        height: 140px;
     }
+
+    body .player .left {
+        width: 200px;
+        height: 100px;
+    }
+
+    body .player .right .bottom video {
+        background-color: blue;
+    }
+
 }
