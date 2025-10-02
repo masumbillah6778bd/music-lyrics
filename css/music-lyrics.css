@@ -149,7 +149,52 @@ body .player .right .bottom video {
     flex-grow: 1;
     height: 32px;
     outline: none;
-    margin-bottom: 20px;
+    margin: 0px 20px 10px 0px;
+}
+
+body .player .right .bottom video::-webkit-media-controls-panel {
+    background: red; /*transparent*/
+}
+
+body .player .right .bottom video::-webkit-media-controls-play-button {
+    background-color: Yellow;
+    border-radius: 50%;
+}
+
+body .player .right .bottom video::-webkit-media-controls-play-button:hover {
+    background-color: cyan;
+}
+
+body .player .right .bottom video::-webkit-media-controls-current-time-display {
+    color: White;
+    font-size: 15px;
+    font-family: times;
+    font-weight: bold;
+}
+
+body .player .right .bottom video::-webkit-media-controls-time-remaining-display {
+    color: Yellow;
+    font-size: 15px;
+    font-family: times;
+    font-weight: bold;
+}
+    
+body .player .right .bottom video::-webkit-media-controls-timeline {
+    background-color: Blue;
+    margin: 10px;
+    border-radius: ;
+}
+
+body .player .right .bottom video::-webkit-media-controls-volume-slider {
+    background-color: green;
+    margin-right: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+body .player .right .bottom video::-webkit-media-controls-mute-button {
+    background-color: Yellow;
+    border-radius: 50%;
 }
 
 @-webkit-keyframes pop-in {
@@ -507,15 +552,22 @@ body .player .right .bottom video {
         width: 100%;
         max-width: 415px;
         height: 140px;
+        border-radius: 10px;
     }
 
     body .player .left {
         width: 200px;
-        height: 100px;
+        height: 50px;
+        padding: 5px;
+        border-radius: 10px;
     }
 
     body .player .right .bottom video {
         background-color: blue;
+        margin: 0px 10px 10px 0px;
     }
 
+    body .player .right .bottom video::-webkit-media-controls-panel {
+        background: blue; /*transparent*/
+    }
 }
