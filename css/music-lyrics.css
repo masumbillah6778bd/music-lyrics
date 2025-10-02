@@ -557,7 +557,7 @@ body .player .right .bottom video::-webkit-media-controls-mute-button {
 
     body .player .left {
         width: 200px;
-        height: 50px;
+        height: 200px;
         padding: 5px;
         border-radius: 10px;
     }
