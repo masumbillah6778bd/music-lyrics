@@ -4,7 +4,7 @@ var _data = '';
 var currentLine = '';
 mounted();
 async function setLyric() {
-  await fetch('aaya-re.json', {
+  await fetch('https://masumbillah6778bd.github.io/music-lyrics/js/lyrics/jodi-ar-ak-jonom.json', {
     method: 'GET',
   })
     .then((response) => response.json())
